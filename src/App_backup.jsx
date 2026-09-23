@@ -160,22 +160,20 @@ export default function App() {
   };
 
   const appStyle = {
-  minHeight: "100vh",
-  background:
-    "linear-gradient(135deg, #0F172A 0%, #111827 100%)",
-  padding: "40px",
-  fontFamily: "Segoe UI, sans-serif",
-  color: "white",
-};
+    minHeight: "100vh",
+    background: "#f3f7fb",
+    padding: "40px",
+    fontFamily: "Segoe UI, sans-serif",
+  };
 
   const cardStyle = {
-  maxWidth: "1000px",
-  margin: "auto",
-  background: "#1E293B",
-  padding: "40px",
-  borderRadius: "20px",
-  boxShadow: "0 0 40px rgba(0,94,184,0.25)",
-};
+    maxWidth: "900px",
+    margin: "auto",
+    background: "white",
+    padding: "40px",
+    borderRadius: "20px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
+  };
 
   if (!started) {
     return (
@@ -227,16 +225,14 @@ export default function App() {
               setStarted(true);
             }}
             style={{
-                  width: "100%",
-                  padding: "18px",
-                  border: "none",
-                  borderRadius: "10px",
-                  background: "#005EB8",
-                  color: "white",
-                  fontWeight: "bold",
-                  fontSize: "18px",
-                  cursor: "pointer",
-              }}
+              width: "100%",
+              padding: "15px",
+              border: "none",
+              borderRadius: "10px",
+              background: "#0078D4",
+              color: "white",
+              cursor: "pointer",
+            }}
           >
             Start Challenge
           </button>
@@ -257,16 +253,9 @@ export default function App() {
       <div style={appStyle}>
         <div style={cardStyle}>
           <h1 style={{ textAlign: "center" }}>
-            🏆 LEAR CORPORATION
+            🎓 Certificate of Completion
           </h1>
-            <h2
-  style={{
-    textAlign: "center",
-    color: "#60A5FA",
-  }}
->
-  CERTIFICATE OF COMPLETION
-</h2>
+
           <h2 style={{ textAlign: "center" }}>
             {playerName}
           </h2>
@@ -333,44 +322,9 @@ export default function App() {
   return (
     <div style={appStyle}>
       <div style={cardStyle}>
-        <>
-  <div style={{ textAlign: "center" }}>
-    /lear-logo.svg
-  </div>
-
-  <div
-    style={{
-      background: "#F59E0B",
-      color: "#111827",
-      textAlign: "center",
-      padding: "10px",
-      borderRadius: "8px",
-      fontWeight: "bold",
-      marginBottom: "25px",
-    }}
-  >
-    THREAT LEVEL: ELEVATED
-  </div>
-
-  <h1
-    style={{
-      textAlign: "center",
-      color: "#60A5FA",
-      fontSize: "3rem",
-    }}
-  >
-    SECURITY OPERATIONS CENTER
-  </h1>
-
-  <h2
-    style={{
-      textAlign: "center",
-      marginBottom: "30px",
-    }}
-  >
-    Cyber Defense Challenge
-  </h2>
-</>
+        <h1 style={{ textAlign: "center", color: "#0078D4" }}>
+          🛡️ SOAR Cyber Awareness Challenge
+        </h1>
 
         <div
           style={{
@@ -389,29 +343,13 @@ export default function App() {
           />
         </div>
 
-        <div
-  style={{
-    background:
-      timeLeft <= 10 ? "#DC2626" : "#005EB8",
-    width: "220px",
-    padding: "12px",
-    borderRadius: "10px",
-    textAlign: "center",
-    fontWeight: "bold",
-    margin: "20px auto",
-  }}
->
-  ⏱️ {timeLeft}s REMAINING
-</div>
+        <h3 style={{ marginTop: "20px" }}>
+          ⏱️ Time Remaining: {timeLeft}s
+        </h3>
 
-        <h3
-  style={{
-    textAlign: "center",
-    color: "#60A5FA",
-  }}
->
-  MISSION {current + 1} / {scenarios.length}
-</h3>
+        <p>
+          Question {current + 1} of {scenarios.length}
+        </p>
 
         <h2>{scenarios[current].question}</h2>
 
@@ -440,15 +378,12 @@ export default function App() {
 
             <div
               style={{
-                background: "#0F172A",
-                border: "1px solid #005EB8",
+                background: "#eef6ff",
                 padding: "20px",
                 borderRadius: "10px",
               }}
             >
-              <strong>
-              🚨 AUTOMATED DEFENSE ACTIONS
-              </strong>
+              <strong>🤖 SOAR Response</strong>
               <p>{scenarios[current].explanation}</p>
             </div>
 
